@@ -1,0 +1,36 @@
+<!-- Hello! 
+This is a WP test assignment for the Flexi IT team!
+Here you can find the source code of the plugin and theme, the site itself can be viewed at http://4535956.atwebpages.com/.
+The site was made according to the following requirements:
+1. **Installation of WordPress**.
+    1. Make a website, install WordPress. You can use free hosting or your own (if you have one). 
+    2. Install the theme https://understrap.com/ or [WP Bootstrap Starter](https://ua.wordpress.org/themes/wp-bootstrap-starter/) (they carry on board the Bootstrap CSS Framework)
+    3. Create a child theme - for customization/refinement
+    4. Install the ACF extension http://wordpress.org/plugins/advanced-custom-fields/
+2. create your own plugin
+which will initialize a new post type “Property” and taxonomy “District”, where the property will be a building (the building can have many apartments or rooms).
+3. Create a set of fields for real estate objects using ACF:** 1.
+    1. “house name (input)” (ACF FIELD = house_name)
+    2. “location coordinates (input)” (ACF FIELD = coordinates)
+    3. “number of floors (1-20, list)”, (ACF FIELD = floors)
+    4. “building type (panel/brick/foam block, radio)” (ACF FIELD = building_type)
+    5. “environmental friendliness” (1-5, list) (ACF FIELD = eco_rating)
+    6. “image” (ACF FIELD = swiper_gallery)
+    7. multi-block fields “premises”, (ACF FIELD = apartments)
+        
+        where there will be such fields as
+        
+        1. “area (input)” (ACF FIELD = area)
+        2. “number of rooms (1-10, radio)” (ACF FIELD = rooms)
+        3. “balcony (yes/no, radio)” (ACF FIELD = balcony)
+        4. “Bathroom (yes/no, radio)” (ACF FIELD = bathroom)
+4. fill the base with fish for 7-10 houses** 5.
+5. **Create your own theme where:**
+    1. main page with the output of standard Wordpress posts
+    2. menu with the output of pages
+    3. each page and post has its own page template
+    4. in the template of the child theme with the output of information about the building should be displayed all these filled attributes and more.
+6. In the plugin, add the initialization of the shortcode and widget, and insert it on the main page.
+It should display a filter block (with all fields) for real estate objects and their premises.
+7. During the search operation, below the filter block, the Ajax tools should display a list of 5 found items with page-by-page output. Each item can be a building or a room with an image, a title, and a short description with a link to the building page.
+-->

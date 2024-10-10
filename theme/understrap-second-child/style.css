@@ -1,0 +1,406 @@
+/*
+Theme Name: Understrap Second Child
+Theme URI: https://understrap.com
+Description: Child theme for Understrap
+Author: Danylo
+Template: understrap
+Version: 1.0.0
+Text Domain: understrap-child
+*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+  background-color: rgba(0, 51, 102, 0.95);
+  position: fixed;
+  width: 100%;
+  z-index: 1030;
+  backdrop-filter: blur(5px);
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #cce0ff !important;
+}
+.navbar .btn-light {
+  color: #003366;
+  background-color: #ffffff;
+  border: none;
+}
+.footer {
+  margin-top: auto;
+  background-color: #003366;
+  color: #ffffff;
+}
+
+.footer h5 {
+  font-weight: bold;
+}
+.footer a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #cce0ff;
+}
+
+.social-icons svg {
+  fill: #ffffff;
+  transition: fill 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  fill: #cce0ff;
+}
+
+/* Main Section */
+.main-section-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.main-section {
+  position: relative;
+  background-attachment: fixed;
+  padding: 100px 0 0;
+  color: #003366;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.985);
+  z-index: 1;
+}
+.main-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 12rem 0 6rem;
+  text-align: center;
+  margin: auto auto 2rem;
+  max-width: 800px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #003366;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  margin-bottom: 2.5rem;
+  color: #004c99;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Advantages Cards */
+.advantages-grid {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+}
+
+.advantages-grid h2 {
+  color: #003366;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.advantage-card {
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 51, 102, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.08);
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+  border-color: rgba(0, 51, 102, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 51, 102, 0.12);
+}
+
+.advantage-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1.25rem;
+  color: #003366;
+}
+
+.advantage-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.advantage-description {
+  font-size: 1rem;
+  color: #004c99;
+  line-height: 1.6;
+}
+
+/* Floating Cards */
+.floating-cards {
+  position: relative;
+  z-index: 2;
+  margin-top: 5rem;
+}
+
+.floating-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 51, 102, 0.15);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.08);
+}
+
+.floating-card:hover {
+  background: #ffffff;
+  transform: translateX(10px);
+  box-shadow: 0 12px 30px rgba(0, 51, 102, 0.12);
+}
+
+.floating-card.right:hover {
+  transform: translateX(-10px);
+}
+
+.floating-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.floating-card p {
+  color: #004c99;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.advantages-grid,
+.floating-cards {
+  position: relative;
+  z-index: 2;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #003366;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: #004c99;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 51, 102, 0.25);
+}
+
+/* Animations */
+
+.advantage-card {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: calc(var(--animation-order) * 0.1s);
+  opacity: 0;
+}
+.advantage-card:hover .advantage-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(0, 51, 102, 0.25);
+}
+/* Property Cards */
+.property-card {
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.property-image {
+  transition: transform 0.3s;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.1);
+}
+/* Loading State */
+.results-section.loading {
+  position: relative;
+  min-height: 400px;
+}
+.results-section.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8) url("loading-spinner.gif") center
+    no-repeat;
+}
+/* Pagination */
+.pagination {
+  margin-bottom: 0;
+}
+.pagination .page-link {
+  color: var(--primary-color);
+  border: none;
+  margin: 0 2px;
+  border-radius: 4px;
+}
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Property Single Page Styles */
+.property-single {
+  padding-top: 76px;
+}
+.property-hero-image {
+  position: relative;
+  z-index: 1;
+}
+.property-info-item {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.property-info-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+.card {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sticky-top {
+    position: fixed;
+    width: 100%;
+  }
+  .main-section {
+    padding-top: 60px;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-content {
+    padding: 8rem 1rem 4rem;
+  }
+
+  .advantages-grid h2 {
+    font-size: 1.8rem;
+  }
+
+  .advantage-title {
+    font-size: 1.1rem;
+  }
+
+  .floating-card {
+    padding: 1.5rem;
+  }
+  .filter-card {
+    padding: 15px !important;
+  }
+
+  .property-card .card-img-top {
+    height: 160px;
+  }
+
+  .building-type-wrapper {
+    flex-direction: column;
+  }
+}
